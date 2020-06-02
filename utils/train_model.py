@@ -20,8 +20,8 @@ riders = pd.read_csv('Datasets/Riders.csv')
 train = train.merge(riders, how='left', on='Rider Id')
 
 y_train = train[['Time from Pickup to Arrival']]
-X_train = train[['Pickup Lat','Pickup Long',
-                 'Destination Lat','Destination Long']]
+X_train = train[['Experience', 'Distance (KM)', 'Temperature', 'No_Of_Orders',
+               'Pickup - Day of Month', 'Pickup - Weekday (Mo = 1)']]
 
 # Fit model
 lm_regression = LinearRegression(normalize=True)
