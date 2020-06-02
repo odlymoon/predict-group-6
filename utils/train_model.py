@@ -15,8 +15,8 @@ import pickle
 from sklearn.linear_model import LinearRegression
 
 # Fetch training data and preprocess for modeling
-train = pd.read_csv('data/train_data.csv')
-riders = pd.read_csv('data/riders.csv')
+train = pd.read_csv('Datasets/Train.csv')
+riders = pd.read_csv('Datasets/Riders.csv')
 train = train.merge(riders, how='left', on='Rider Id')
 
 y_train = train[['Time from Pickup to Arrival']]
